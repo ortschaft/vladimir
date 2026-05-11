@@ -11,87 +11,49 @@
         }
 
         section {
-            min-height: 100vh; display: flex; flex-direction: column;
+            min-height: 100vh; display: none; flex-direction: column;
             align-items: center; justify-content: center; text-align: center;
             padding: 40px; box-sizing: border-box; position: relative;
             background-size: cover; background-position: center; background-attachment: fixed;
         }
 
-        /* HINTERGRUNDBILDER */
-        .hero { background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://i.imgur.com/0u3ABNo.jpeg'); }
+        /* Startseite und Info immer sichtbar wenn aktiv */
+        .hero, .info { display: flex; }
+
+        .hero { background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://i.imgur.com/0u3ABNo.jpeg'); display: flex; }
         .info { background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://www.literaturversand.de/WebRoot/Store19/Shops/61747099/6284/C09E/4C19/5BBB/838D/0A0C/6D0C/C6A5/9783959666367.jpg'); }
-        
-        #q1 { background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://img.fotocommunity.com/basilius-kathedrale-roter-platz-moskau-9a4c065d-956b-49e5-9b88-ec3c904028bc.jpg?height=1080'); }
-        #q2 { background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://rp-online.de/imgs/32/1/9/3/4/5/8/9/3/tok_8b5d2dc9ea33b519c9caa07ade3a7a01/w940_h528_x470_y264_026f0f6bfe3fa6c6.jpg'); }
-        #q3 { background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://www.lernidee.de/images/travel-image/96_die_wolga_bei_samara_-_elen_studio_-_fotolia.com_x.jpg'); }
-        #q4 { background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://i.pinimg.com/originals/b6/46/0d/b6460dac1c47b039b1869b549ac43a43.jpg'); }
-        #q5 { background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://www.thoughtco.com/thmb/4F8JnmTdTy-QjnAdN8R1Z6sWFvg=/4850x3637/filters:no_upscale():max_bytes(150000):strip_icc()/russia-cathedral-christsavior-56a02ce65f9b58eba4af4438.jpg'); }
-        #q6 { background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://i.imgur.com/k7VglWP.jpeg'); }
-        #q7 { background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://www.slashgear.com/img/gallery/everything-to-know-about-the-soviet-t-34-tank/intro-1712004246.jpg'); }
-        #q8 { background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://image.geo.de/32831194/t/GI/v3/w1440/r1.5/-/3206730.jpg'); }
-        #q9 { background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://img.nzz.ch/2021/6/21/18f5bda2-d5a5-463f-b2ed-9376a1a20d63.jpeg?width=1360&height=1023&fit=bounds&quality=75&auto=webp&crop=3639'); }
-        #q10 { background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://thumbs.dreamstime.com/b/denkmal-des-zweiten-weltkriegs-46244266.jpg'); }
-        #q11 { background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://th.bing.com/th/id/R.6b989e61c90b5a4f79382a030e3d7c8e?rik=fZUV2Ye3bjonkQ&pid=ImgRaw&r=0'); }
-        #q12 { background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://assets.deutschlandfunk.de/FILE_2cbff5a62e4b30d7d560e0d2ae8f2343/1920x1080.jpg?t=1624976735929'); }
-        #q13 { background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/fe/e2/e9/getlstd-property-photo.jpg?w=1200&h=1200&s=1'); }
-        #q14 { background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://tse3.mm.bing.net/th/id/OIP.KkFZoyCzAxm0Xi0F2iebbAHaE7?r=0&rs=1&pid=ImgDetMain&o=7&rm=3'); }
-        #q15 { background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://th.bing.com/th/id/OIP.f7OqnZScs03fLuM-YKMInwHaD4?w=318&h=180&c=7&r=0&o=7&pid=1.7&rm=3'); }
-        #victory { background-image: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)), url('https://www.wallpaperuse.com/wallp/43-434851_m.jpg'); }
+        .victory-bg { background-image: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)), url('https://www.wallpaperuse.com/wallp/43-434851_m.jpg'); }
 
-        .quiz-section { display: none; border-top: 2px solid #ffffff; }
-
-        /* BUTTON DESIGN: SCHWARZ MIT WEISSEN WELLEN */
         .btn {
             padding: 22px 50px;
             background: #000000;
             color: white;
             text-decoration: none;
             border-radius: 5px;
-            font-weight: bold;
-            font-size: 1.3rem;
-            transition: 0.3s;
-            display: inline-block;
-            margin: 15px;
-            border: 1px solid #444;
-            cursor: pointer;
-            position: relative;
-            overflow: hidden;
+            font-weight: bold; font-size: 1.3rem;
+            transition: 0.3s; display: inline-block;
+            margin: 15px; border: 1px solid #444;
+            cursor: pointer; position: relative; overflow: hidden;
         }
 
-        .btn:hover { 
-            background-color: #222; 
-            transform: scale(1.05);
-            border-color: #fff;
-        }
+        .btn:hover { background-color: #222; transform: scale(1.05); border-color: #fff; }
 
         .btn::after {
-            content: '';
-            position: absolute;
-            top: 0; left: -100%;
+            content: ''; position: absolute; top: 0; left: -100%;
             width: 100%; height: 100%;
             background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
             animation: wave 3s infinite linear;
         }
 
-        @keyframes wave {
-            0% { left: -100%; }
-            100% { left: 100%; }
-        }
+        @keyframes wave { 0% { left: -100%; } 100% { left: 100%; } }
 
-        /* PUTIN ANIMATION */
-        @keyframes fadeInScale {
-            from { opacity: 0; transform: scale(0.5); }
-            to { opacity: 1; transform: scale(1); }
-        }
-
-        #putin-overlay {
-            display: none;
-            position: fixed;
+        /* STALIN OVERLAY */
+        #stalin-overlay {
+            display: none; position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
-            background: url('https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHJmZzR6NXA0eXp6ZzR6NXA0eXp6ZzR6NXA0eXp6ZzR6NXA0eXp6JmVwPXYxX2ludGVybmFsX2dpZl9ieV9pZCZjdD1n/bef5Fn7091uog/giphy.gif') center center no-repeat;
-            background-size: cover;
+            background: url('https://upload.wikimedia.org/wikipedia/commons/1/16/Stalin_lg_zl_6.jpg') center center no-repeat;
+            background-size: contain; background-color: black;
             z-index: 1000;
-            animation: fadeInScale 1s ease-out;
         }
 
         .container { max-width: 900px; }
@@ -100,187 +62,126 @@
 <body>
 
     <audio id="hintergrundmusik" loop><source src="music.mp3" type="audio/mpeg"></audio>
-    <div id="putin-overlay" onclick="this.style.display='none'"></div>
+    <div id="stalin-overlay"></div>
 
-    <section class="hero">
+    <section class="hero" id="hero">
         <h1>Russland: Imperium & Geschichte</h1>
-        <p>Bist du bereit für das schwerste Quiz des Ostens?</p>
+        <p>Bist du bereit für das schwerste Quiz des Ostens? Ein Fehler und du fängst von vorne an!</p>
         <button class="btn" onclick="startQuiz()">Eintritt wagen</button>
     </section>
 
-    <section class="info quiz-section" id="info">
+    <section class="info" id="info" style="display:none;">
         <div class="container">
             <h2>Von den Anfängen bis zur Moderne</h2>
-            <p>Russland umfasst 11 Zeitzonen und eine Geschichte, die die Welt veränderte.</p>
-            <button class="btn" onclick="unlock('q1')">Prüfung beginnen</button>
+            <p>15 zufällige Fragen trennen dich vom Sieg.</p>
+            <button class="btn" onclick="showNextQuestion()">Prüfung beginnen</button>
         </div>
     </section>
 
-    <section class="quiz-section" id="q1">
-        <h2>Frage 1: Der Aufbau</h2>
-        <p>Welcher Fluss gilt als der längste Fluss des europäischen Russlands?</p>
-        <button class="btn" onclick="unlock('q2')">Wolga</button>
-        <button class="btn" onclick="fail()">Don</button>
-        <button class="btn" onclick="fail()">Lena</button>
-    </section>
+    <section id="quiz-container"></section>
 
-    <section class="quiz-section" id="q2">
-        <h2>Frage 2</h2>
-        <p>In welcher Stadt endet die Transsibirische Eisenbahn?</p>
-        <button class="btn" onclick="fail()">Irkutsk</button>
-        <button class="btn" onclick="unlock('q3')">Wladiwostok</button>
-        <button class="btn" onclick="fail()">Moskau</button>
-    </section>
-
-    <section class="quiz-section" id="q3">
-        <h2>Frage 3</h2>
-        <p>Welches Gebirge trennt Europa von Asien?</p>
-        <button class="btn" onclick="unlock('q4')">Ural</button>
-        <button class="btn" onclick="fail()">Kaukasus</button>
-        <button class="btn" onclick="fail()">Altai</button>
-    </section>
-
-    <section class="quiz-section" id="q4">
-        <h2>Frage 4</h2>
-        <p>Wie heißt der tiefste Süßwassersee der Welt?</p>
-        <button class="btn" onclick="unlock('q5')">Baikalsee</button>
-        <button class="btn" onclick="fail()">Ladogasee</button>
-        <button class="btn" onclick="fail()">Onegasee</button>
-    </section>
-
-    <section class="quiz-section" id="q5">
-        <h2>Frage 5</h2>
-        <p>Wie viele Zeitzonen hat Russland?</p>
-        <button class="btn" onclick="fail()">9</button>
-        <button class="btn" onclick="unlock('q6')">11</button>
-        <button class="btn" onclick="fail()">12</button>
-    </section>
-
-    <section class="quiz-section" id="q6">
-        <h2>Frage 6: WWII</h2>
-        <p>Wie hießen die Raketenwerfer "Stalinorgel" offiziell?</p>
-        <button class="btn" onclick="unlock('q7')">Katjuscha</button>
-        <button class="btn" onclick="fail()">Molotow</button>
-        <button class="btn" onclick="fail()">Sputnik</button>
-    </section>
-
-    <section class="quiz-section" id="q7">
-        <h2>Frage 7</h2>
-        <p>Welcher Panzer war das Rückgrat der Roten Armee?</p>
-        <button class="btn" onclick="unlock('q8')">T-34</button>
-        <button class="btn" onclick="fail()">Tiger</button>
-        <button class="btn" onclick="fail()">Panther</button>
-    </section>
-
-    <section class="quiz-section" id="q8">
-        <h2>Frage 8</h2>
-        <p>Welche Stadt wurde 900 Tage belagert?</p>
-        <button class="btn" onclick="fail()">Stalingrad</button>
-        <button class="btn" onclick="unlock('q9')">Leningrad</button>
-        <button class="btn" onclick="fail()">Kursk</button>
-    </section>
-
-    <section class="quiz-section" id="q9">
-        <h2>Frage 9</h2>
-        <p>Wer war der wichtigste sowjetische General?</p>
-        <button class="btn" onclick="unlock('q10')">Georgi Schukow</button>
-        <button class="btn" onclick="fail()">Stalin</button>
-        <button class="btn" onclick="fail()">Trotski</button>
-    </section>
-
-    <section class="quiz-section" id="q10">
-        <h2>Frage 10</h2>
-        <p>Wie viele sowjetische Opfer forderte der Krieg ca.?</p>
-        <button class="btn" onclick="fail()">10 Mio</button>
-        <button class="btn" onclick="unlock('q11')">27 Mio</button>
-        <button class="btn" onclick="fail()">5 Mio</button>
-    </section>
-
-    <section class="quiz-section" id="q11">
-        <h2>Frage 11: Heute</h2>
-        <p>Welches Gebäude steht am Roten Platz?</p>
-        <button class="btn" onclick="unlock('q12')">Basilius-Kathedrale</button>
-        <button class="btn" onclick="fail()">Eremitage</button>
-        <button class="btn" onclick="fail()">Weißes Haus</button>
-    </section>
-
-    <section class="quiz-section" id="q12">
-        <h2>Frage 12</h2>
-        <p>Wie heißt die russische Exklave an der Ostsee?</p>
-        <button class="btn" onclick="unlock('q13')">Kaliningrad</button>
-        <button class="btn" onclick="fail()">Krim</button>
-        <button class="btn" onclick="fail()">Sotschi</button>
-    </section>
-
-    <section class="quiz-section" id="q13">
-        <h2>Frage 13</h2>
-        <p>Wo fanden die Winterspiele 2014 statt?</p>
-        <button class="btn" onclick="unlock('q14')">Sotschi</button>
-        <button class="btn" onclick="fail()">Moskau</button>
-        <button class="btn" onclick="fail()">Kasan</button>
-    </section>
-
-    <section class="quiz-section" id="q14">
-        <h2>Frage 14</h2>
-        <p>Wie heißt die russische Währung?</p>
-        <button class="btn" onclick="fail()">Dollar</button>
-        <button class="btn" onclick="unlock('q15')">Rubel</button>
-        <button class="btn" onclick="fail()">Euro</button>
-    </section>
-
-    <section class="quiz-section" id="q15">
-        <h2>Frage 15</h2>
-        <p>Wie heißt der russische Weltraumbahnhof?</p>
-        <button class="btn" onclick="unlock('victory')">Baikonur</button>
-        <button class="btn" onclick="fail()">NASA</button>
-        <button class="btn" onclick="fail()">Area 51</button>
-    </section>
-
-    <section class="quiz-section" id="victory">
+    <section id="victory" class="victory-bg">
         <h2>SIEG!</h2>
         <p>Du hast alle Fragen beantwortet. Aber hast du den Schlüssel zur Macht?</p>
-        
         <div id="lock-container" style="cursor: pointer; font-size: 4rem;" onclick="checkPin()">🔒</div>
-
         <div id="secret-content" style="display: none; margin-top: 20px;">
             <p>Willkommen im inneren Kreis.</p>
             <a href="https://ortschaft.github.io/genghiskahn" class="btn" style="background: #cc0000;">Mongolei</a>
         </div>
-
         <br>
         <button class="btn" onclick="location.reload()">Neustart</button>
     </section>
 
     <script>
-        const audio = document.getElementById('hintergrundmusik');
+        const questions = [
+            { q: "Welcher Fluss ist der längste im europäischen Russland?", a: ["Wolga", "Don", "Lena"], img: "https://img.fotocommunity.com/basilius-kathedrale-roter-platz-moskau-9a4c065d-956b-49e5-9b88-ec3c904028bc.jpg?height=1080" },
+            { q: "Wo endet die Transsibirische Eisenbahn?", a: ["Wladiwostok", "Irkutsk", "Moskau"], img: "https://rp-online.de/imgs/32/1/9/3/4/5/8/9/3/tok_8b5d2dc9ea33b519c9caa07ade3a7a01/w940_h528_x470_y264_026f0f6bfe3fa6c6.jpg" },
+            { q: "Welches Gebirge trennt Europa von Asien?", a: ["Ural", "Kaukasus", "Altai"], img: "https://www.lernidee.de/images/travel-image/96_die_wolga_bei_samara_-_elen_studio_-_fotolia.com_x.jpg" },
+            { q: "Wie heißt der tiefste Süßwassersee der Welt?", a: ["Baikalsee", "Ladogasee", "Onegasee"], img: "https://i.pinimg.com/originals/b6/46/0d/b6460dac1c47b039b1869b549ac43a43.jpg" },
+            { q: "Wie viele Zeitzonen hat Russland?", a: ["11", "9", "12"], img: "https://www.thoughtco.com/thmb/4F8JnmTdTy-QjnAdN8R1Z6sWFvg=/4850x3637/filters:no_upscale():max_bytes(150000):strip_icc()/russia-cathedral-christsavior-56a02ce65f9b58eba4af4438.jpg" },
+            { q: "Wie hießen die Raketenwerfer 'Stalinorgel' offiziell?", a: ["Katjuscha", "Molotow", "Sputnik"], img: "https://i.imgur.com/k7VglWP.jpeg" },
+            { q: "Welcher Panzer war das Rückgrat der Roten Armee?", a: ["T-34", "Tiger", "Panther"], img: "https://www.slashgear.com/img/gallery/everything-to-know-about-the-soviet-t-34-tank/intro-1712004246.jpg" },
+            { q: "Welche Stadt wurde 900 Tage belagert?", a: ["Leningrad", "Stalingrad", "Kursk"], img: "https://image.geo.de/32831194/t/GI/v3/w1440/r1.5/-/3206730.jpg" },
+            { q: "Wer war der wichtigste sowjetische General?", a: ["Georgi Schukow", "Stalin", "Trotski"], img: "https://img.nzz.ch/2021/6/21/18f5bda2-d5a5-463f-b2ed-9376a1a20d63.jpeg?width=1360&height=1023&fit=bounds&quality=75&auto=webp&crop=3639" },
+            { q: "Wie viele sowjetische Opfer forderte der WWII ca.?", a: ["27 Mio", "10 Mio", "5 Mio"], img: "https://thumbs.dreamstime.com/b/denkmal-des-zweiten-weltkriegs-46244266.jpg" },
+            { q: "Welches Gebäude steht am Roten Platz?", a: ["Basilius-Kathedrale", "Eremitage", "Weißes Haus"], img: "https://th.bing.com/th/id/R.6b989e61c90b5a4f79382a030e3d7c8e?rik=fZUV2Ye3bjonkQ&pid=ImgRaw&r=0" },
+            { q: "Wie heißt die russische Exklave an der Ostsee?", a: ["Kaliningrad", "Krim", "Sotschi"], img: "https://assets.deutschlandfunk.de/FILE_2cbff5a62e4b30d7d560e0d2ae8f2343/1920x1080.jpg?t=1624976735929" },
+            { q: "Wo fanden die Winterspiele 2014 statt?", a: ["Sotschi", "Moskau", "Kasan"], img: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/fe/e2/e9/getlstd-property-photo.jpg?w=1200&h=1200&s=1" },
+            { q: "Wie heißt die russische Währung?", a: ["Rubel", "Dollar", "Euro"], img: "https://tse3.mm.bing.net/th/id/OIP.KkFZoyCzAxm0Xi0F2iebbAHaE7?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" },
+            { q: "Wie heißt der russische Weltraumbahnhof?", a: ["Baikonur", "NASA", "Area 51"], img: "https://th.bing.com/th/id/OIP.f7OqnZScs03fLuM-YKMInwHaD4?w=318&h=180&c=7&r=0&o=7&pid=1.7&rm=3" }
+        ];
+
+        let currentQuestionIndex = 0;
+        let shuffledQuestions = [];
+
+        function shuffle(array) {
+            return array.sort(() => Math.random() - 0.5);
+        }
 
         function startQuiz() {
-            audio.play();
+            document.getElementById('hintergrundmusik').play();
+            document.getElementById('hero').style.display = 'none';
             document.getElementById('info').style.display = 'flex';
-            setTimeout(() => { document.getElementById('info').scrollIntoView(); }, 100);
+            shuffledQuestions = shuffle([...questions]);
         }
 
-        function unlock(nextId) {
-            const nextSec = document.getElementById(nextId);
-            nextSec.style.display = 'flex';
-            setTimeout(() => { nextSec.scrollIntoView(); }, 100);
+        function showNextQuestion() {
+            if (currentQuestionIndex >= shuffledQuestions.length) {
+                showVictory();
+                return;
+            }
+
+            const data = shuffledQuestions[currentQuestionIndex];
+            const container = document.getElementById('quiz-container');
+            container.style.display = 'flex';
+            container.style.backgroundImage = `linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('${data.img}')`;
+            
+            // Antworten mischen
+            const correctAns = data.a[0];
+            const shuffledAns = shuffle([...data.a]);
+
+            container.innerHTML = `
+                <div class="container">
+                    <h2>Frage ${currentQuestionIndex + 1}</h2>
+                    <p>${data.q}</p>
+                    <div id="answers">
+                        ${shuffledAns.map(ans => `
+                            <button class="btn" onclick="checkAnswer('${ans}', '${correctAns}')">${ans}</button>
+                        `).join('')}
+                    </div>
+                </div>
+            `;
+            container.scrollIntoView();
         }
 
-        function fail() {
-            alert("Njet! Falsch.");
+        function checkAnswer(selected, correct) {
+            if (selected === correct) {
+                currentQuestionIndex++;
+                showNextQuestion();
+            } else {
+                alert("Njet! Falsch. Ab zurück an den Anfang!");
+                location.reload();
+            }
+        }
+
+        function showVictory() {
+            document.getElementById('quiz-container').style.display = 'none';
+            document.getElementById('info').style.display = 'none';
+            document.getElementById('victory').style.display = 'flex';
+            document.getElementById('victory').scrollIntoView();
         }
 
         function checkPin() {
-            const pin = prompt("Gib den geheimen Namen des Zaren ein:");
+            const pin = prompt("Gib den geheimen Namen ein:");
             if (pin === "Vladimir") {
-                document.getElementById('putin-overlay').style.display = 'block';
+                const overlay = document.getElementById('stalin-overlay');
+                overlay.style.display = 'block';
                 document.getElementById('lock-container').style.display = 'none';
                 document.getElementById('secret-content').style.display = 'block';
                 
-                // Automatisches Schließen der Animation nach 4 Sekunden
                 setTimeout(() => {
-                    document.getElementById('putin-overlay').style.display = 'none';
-                }, 4000);
+                    overlay.style.display = 'none';
+                }, 3000);
             } else {
                 alert("Zugriff verweigert!");
             }
