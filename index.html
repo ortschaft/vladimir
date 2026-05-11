@@ -146,4 +146,145 @@
         <button class="btn" onclick="unlock('q5')">Baikalsee</button>
         <button class="btn" onclick="fail()">Ladogasee</button>
         <button class="btn" onclick="fail()">Onegasee</button>
-    </
+    </section>
+
+    <section class="quiz-section" id="q5">
+        <h2>Frage 5</h2>
+        <p>Wie viele Zeitzonen hat Russland?</p>
+        <button class="btn" onclick="fail()">9</button>
+        <button class="btn" onclick="unlock('q6')">11</button>
+        <button class="btn" onclick="fail()">12</button>
+    </section>
+
+    <section class="quiz-section" id="q6">
+        <h2>Frage 6: WWII</h2>
+        <p>Wie hießen die Raketenwerfer "Stalinorgel" offiziell?</p>
+        <button class="btn" onclick="unlock('q7')">Katjuscha</button>
+        <button class="btn" onclick="fail()">Molotow</button>
+        <button class="btn" onclick="fail()">Sputnik</button>
+    </section>
+
+    <section class="quiz-section" id="q7">
+        <h2>Frage 7</h2>
+        <p>Welcher Panzer war das Rückgrat der Roten Armee?</p>
+        <button class="btn" onclick="unlock('q8')">T-34</button>
+        <button class="btn" onclick="fail()">Tiger</button>
+        <button class="btn" onclick="fail()">Panther</button>
+    </section>
+
+    <section class="quiz-section" id="q8">
+        <h2>Frage 8</h2>
+        <p>Welche Stadt wurde 900 Tage belagert?</p>
+        <button class="btn" onclick="fail()">Stalingrad</button>
+        <button class="btn" onclick="unlock('q9')">Leningrad</button>
+        <button class="btn" onclick="fail()">Kursk</button>
+    </section>
+
+    <section class="quiz-section" id="q9">
+        <h2>Frage 9</h2>
+        <p>Wer war der wichtigste sowjetische General?</p>
+        <button class="btn" onclick="unlock('q10')">Georgi Schukow</button>
+        <button class="btn" onclick="fail()">Stalin</button>
+        <button class="btn" onclick="fail()">Trotski</button>
+    </section>
+
+    <section class="quiz-section" id="q10">
+        <h2>Frage 10</h2>
+        <p>Wie viele sowjetische Opfer forderte der Krieg ca.?</p>
+        <button class="btn" onclick="fail()">10 Mio</button>
+        <button class="btn" onclick="unlock('q11')">27 Mio</button>
+        <button class="btn" onclick="fail()">5 Mio</button>
+    </section>
+
+    <section class="quiz-section" id="q11">
+        <h2>Frage 11: Heute</h2>
+        <p>Welches Gebäude steht am Roten Platz?</p>
+        <button class="btn" onclick="unlock('q12')">Basilius-Kathedrale</button>
+        <button class="btn" onclick="fail()">Eremitage</button>
+        <button class="btn" onclick="fail()">Weißes Haus</button>
+    </section>
+
+    <section class="quiz-section" id="q12">
+        <h2>Frage 12</h2>
+        <p>Wie heißt die russische Exklave an der Ostsee?</p>
+        <button class="btn" onclick="unlock('q13')">Kaliningrad</button>
+        <button class="btn" onclick="fail()">Krim</button>
+        <button class="btn" onclick="fail()">Sotschi</button>
+    </section>
+
+    <section class="quiz-section" id="q13">
+        <h2>Frage 13</h2>
+        <p>Wo fanden die Winterspiele 2014 statt?</p>
+        <button class="btn" onclick="unlock('q14')">Sotschi</button>
+        <button class="btn" onclick="fail()">Moskau</button>
+        <button class="btn" onclick="fail()">Kasan</button>
+    </section>
+
+    <section class="quiz-section" id="q14">
+        <h2>Frage 14</h2>
+        <p>Wie heißt die russische Währung?</p>
+        <button class="btn" onclick="fail()">Dollar</button>
+        <button class="btn" onclick="unlock('q15')">Rubel</button>
+        <button class="btn" onclick="fail()">Euro</button>
+    </section>
+
+    <section class="quiz-section" id="q15">
+        <h2>Frage 15</h2>
+        <p>Wie heißt der russische Weltraumbahnhof?</p>
+        <button class="btn" onclick="unlock('victory')">Baikonur</button>
+        <button class="btn" onclick="fail()">NASA</button>
+        <button class="btn" onclick="fail()">Area 51</button>
+    </section>
+
+    <section class="quiz-section" id="victory">
+        <h2>SIEG!</h2>
+        <p>Du hast alle Fragen beantwortet. Aber hast du den Schlüssel zur Macht?</p>
+        
+        <div id="lock-container" style="cursor: pointer; font-size: 4rem;" onclick="checkPin()">🔒</div>
+
+        <div id="secret-content" style="display: none; margin-top: 20px;">
+            <p>Willkommen im inneren Kreis.</p>
+            <a href="https://ortschaft.github.io/genghiskahn" class="btn" style="background: #cc0000;">Mongolei</a>
+        </div>
+
+        <br>
+        <button class="btn" onclick="location.reload()">Neustart</button>
+    </section>
+
+    <script>
+        const audio = document.getElementById('hintergrundmusik');
+
+        function startQuiz() {
+            audio.play();
+            document.getElementById('info').style.display = 'flex';
+            setTimeout(() => { document.getElementById('info').scrollIntoView(); }, 100);
+        }
+
+        function unlock(nextId) {
+            const nextSec = document.getElementById(nextId);
+            nextSec.style.display = 'flex';
+            setTimeout(() => { nextSec.scrollIntoView(); }, 100);
+        }
+
+        function fail() {
+            alert("Njet! Falsch.");
+        }
+
+        function checkPin() {
+            const pin = prompt("Gib den geheimen Namen des Zaren ein:");
+            if (pin === "Vladimir") {
+                document.getElementById('putin-overlay').style.display = 'block';
+                document.getElementById('lock-container').style.display = 'none';
+                document.getElementById('secret-content').style.display = 'block';
+                
+                // Automatisches Schließen der Animation nach 4 Sekunden
+                setTimeout(() => {
+                    document.getElementById('putin-overlay').style.display = 'none';
+                }, 4000);
+            } else {
+                alert("Zugriff verweigert!");
+            }
+        }
+    </script>
+</body>
+</html>
